@@ -1,0 +1,19 @@
+changeset:
+    database_schema: the_db
+    type: 'DDL:Table:Create'
+    classification: painless
+    submitted_by: Joe DBA
+
+changeset_details:
+    - type: add
+      description: create new table
+      apply_sql: "CREATE TABLE `newtable20130606` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `team` varchar(255) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=MyISAM DEFAULT CHARSET=latin1;"
+      revert_sql: "drop table `newtable20130606`"
+      count_sql:
+      volumetric_values:
+    - type: ins
+      description: add rows
+      apply_sql: "insert into newtable20130606 (name, email, team) values ('joe', 'joe@example.com', 'a'); insert into newtable20130606 (name, email, team) values ('sue', 'sue@example.com', 'a'); insert into newtable20130606 (name, email, team) values ('rod', 'rod@example.com', 'b'); insert into newtable20130606 (name, email, team) values ('megan', 'megan@example.com', 'c');"
+      revert_sql: 
+      count_sql:
+      volumetric_values:

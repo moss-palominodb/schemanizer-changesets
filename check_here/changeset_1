@@ -3,7 +3,6 @@ changeset:
     type: 'DDL:Table:Create'
     classification: painless
     submitted_by: Joe DBA
-    submitted_at: 2013-06-05 02:05:40+08:00
 
 changeset_details:
     - type: add
