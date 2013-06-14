@@ -9,5 +9,3 @@ changeset_details:
       description: create new table
       apply_sql: "CREATE TABLE `newtable20130605` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `team` varchar(255) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=MyISAM DEFAULT CHARSET=latin1;"
       revert_sql: "drop table `newtable20130605`"
-      count_sql:
-      volumetric_values:
