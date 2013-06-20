@@ -1,8 +1,8 @@
 changeset:
-    database_schema: abcd
+    database_schema: abc
     type: 'DDL:Table:Create'
     classification: painless
-    submitted_by: Joe DBA
+    submitted_by: Joe DCA
 
 changeset_details:
     - description: create new table
