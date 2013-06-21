@@ -1,0 +1,22 @@
+changeset:
+    database_schema: the_db
+    type: 'DDL:Table:Create'
+    classification: painless
+
+changeset_details:
+    - description: create new table
+      apply_sql: |
+        CREATE TABLE `abc` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `abc` varchar(255) DEFAULT NULL,
+          `def` varchar(255) DEFAULT NULL,
+          `ghi` varchar(10) DEFAULT NULL,
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+      revert_sql: "drop table `abc`"
+
+    - description: add column
+      apply_sql: "alter table abc add column mno integer(3) NOT NULL"
+      revert_sql: "alter table abc drop column mno"
+
