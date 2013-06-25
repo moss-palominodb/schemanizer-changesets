@@ -1,0 +1,9 @@
+changeset:
+    database_schema: abc
+    type: 'DDL:Table:Create'
+    classification: painless
+
+changeset_details:
+    - description: alter table
+      apply_sql: "alter table brand_new_table add column jkl integer(3) NOT NULL"
+      revert_sql: "alter table brand_new_table drop column jkl"
